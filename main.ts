@@ -21,7 +21,12 @@
 //     re-bought in the same minute
 // Local backtest on the kit's frozen 24h dev window: net PnL +$43.95 on
 // $1,000, 16 trades (8 round trips), win rate 62.5%, max drawdown 1.8%,
-// still +$22.42 at 2x fees. The whole tuned neighbourhood is profitable
+// still +$22.42 at 2x fees. The kit's own harness grades the same bot
+// (`grade-local --driver process`, two executions, reproduced byte for
+// byte) at net PnL +$36.88, 16 trades, win rate 62.5%, max drawdown
+// 1.87%, fees $6.57, guardrails met, still +$30.32 at 2x fees — the
+// harness figure is the one that counts, the flat-model figure is the
+// tuning record. The whole tuned neighbourhood is profitable
 // at 1x fees (48/48 configs over N 18-20, momentum 0.375-0.45%, trailing
 // 0.6-1.2%), and every immediate neighbour of the chosen set stays above
 // +$39 at 1x and above +$19 at 2x fees, so this is the middle of a broad
